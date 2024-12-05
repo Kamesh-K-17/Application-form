@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validate()
+        {
+            var n=document.getElementsByClassName("in")
+            var p=document.getElementsByClassName("ans")
+            var res=["!!! name","!!!email","!!!password","!!!confirm password","!!!mobile number"];
+            f=true
+            for(i=0;i<=n.length;i++)
+        {
+            if(n[i].value=="")
+        {
+            p[i].innerHTML=res[i]+"Must be fill out";
+            p[i].style.color='';
+            f=false
+        }
+                else
+                {
+                    p[i].innerHTML='';
+                }
+            }
+            return f
+        }
+    
+        
+    </script>
+    <form action="">
+    <label for="">Name :</label>
+    <input type="text" class="in"><br>
+    <p class="ans"></p>
+    <label for="">Email :</label>
+    <input type="text" class="in"><br>
+    <p class="ans"></p>
+    <label for="">Password :</label>
+    <input type="password" class="in"><br>
+    <p class="ans"></p>
+    <label for="">Re Enter:</label>
+    <input type="text" class="in"><br>
+    <p class="ans"></p>
+    <label for="">Contact :</label>
+    <input type="text" class="in"><br>
+    <p class="ans"></p>
+    <button onclick="return validate()">submit</button>
+</form>
+</body>
+</html>
